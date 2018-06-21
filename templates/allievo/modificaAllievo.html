@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Modifica Allievo</title>
+<link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon.png" />
+<link rel="icon" type="image/png" href="img/apple-touch-icon.png" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<link href="../static/css/results.css" th:href="@{/css/results.css}"
+	rel="stylesheet" />
+
+
+</head>
+<body>
+	<div class="main-container">
+
+		<div class=" highlight" style="margin: 0 auto;">
+
+			<h1>Modifica allievo</h1>
+			<div class="row"></div>
+			<div class="row">
+				<form action="#"
+					th:action="@{/allievo/modificaAllievo(id=${allievo.id})}"
+					th:object="${allievo}" method="post">
+						<div>
+							Nome:  <span><input
+								type="text" th:field="*{nome}" /></span> <span
+								th:if="${#fields.hasErrors('nome')}"
+								th:text="#{label.mandatory}">Error</span>
+						</div>
+						<div>
+							Cognome:  <span><input
+								type="text" th:field="*{cognome}" /></span> <span
+								th:if="${#fields.hasErrors('cognome')}"
+								th:text="#{label.mandatory}">Error</span>
+						</div>
+						<div>
+							Email:  <span><input
+								type="text" th:field="*{email}" /></span> <span
+								th:if="${#fields.hasErrors('email')}"
+								th:text="#{label.mandatory}">Error</span>
+						</div>
+						<div>
+							Luogo di Nascita:  <span><input
+								type="text" th:field="*{luogoNascita}" /></span> <span
+								th:if="${#fields.hasErrors('luogoNascita')}"
+								th:text="#{label.mandatory}">Error</span>
+						</div>
+						<div>Data di nascita:</div>
+				<div><input type="date" th:field="*{dataNascita}" /></div>
+				<div th:if="${#fields.hasErrors('dataNascita')}" th:errors="*{dataNascita}"></div>
+				
+					<div>
+						<input type="submit" name="submit" />
+					</div>
+				</form>
+				<a th:href="@{/}"> <span><input type="submit"
+						name="submit" value="Home" /></span></a>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

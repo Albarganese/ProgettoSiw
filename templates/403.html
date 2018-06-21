@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="utf-8" />
+<title>Security with Spring Boot</title>
+<link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon.png" />
+<link rel="icon" type="image/png" href="img/apple-touch-icon.png" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<link href="../static/css/results.css" th:href="@{/css/results.css}"
+	rel="stylesheet" />
+
+
+</head>
+<body>
+	<div class="main-container">
+
+		<div class=" highlight" style="margin: 0 auto;">
+
+			<h1 style="color: blue">Access is Denied!</h1>
+			<a style="color: blue" th:href="@{/}">Go to Home Page</a> <a
+				th:href="@{/}"> <span><input type="submit" name="submit"
+					value="Home" /></span></a>
+
+		</div>
+	</div>
+
+</body>
+</html>

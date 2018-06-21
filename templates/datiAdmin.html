@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Admin Inserito</title>
+<link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon.png" />
+<link rel="icon" type="image/png" href="img/apple-touch-icon.png" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<link href="../static/css/results.css" th:href="@{/css/results.css}"
+	rel="stylesheet" />
+
+</head>
+<body>
+	<div class="main-container">
+
+		<div class=" highlight" style="margin: 0 auto;">
+
+			<h1>Amministratore inserito</h1>
+			<div class="row"></div>
+			<div class="row">
+				<ul>
+					<li th:text="${admin.username}"></li>
+					<li th:text="${admin.nome}"></li>
+					<li th:text="${admin.cognome}"></li>
+					<li th:text="${admin.email}"></li>
+				</ul>
+				<a th:href="@{/}"> <span><input type="submit"
+						name="submit" value="ritorna alla Home" /></span></a> <a th:href="@{/}">
+					
+				</a>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

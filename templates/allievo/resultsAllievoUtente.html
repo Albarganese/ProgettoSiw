@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Allievo</title>
+<link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon.png" />
+<link rel="icon" type="image/png" href="img/apple-touch-icon.png" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<link href="../static/css/results.css" th:href="@{/css/results.css}"
+	rel="stylesheet" />
+</head>
+<body>
+	<div class="main-container">
+
+		<div class=" highlight" style="margin: 0 auto;">
+				<a th:href="@{/}"> <span><input type="submit" name="submit" value="Home" /></span></a>
+		
+
+			<h1 th:text="${allievo.nome} + ${allievo.cognome}"> </h1>
+			<div class="row">
+				
+					<div>
+						<p th:text="'Nome: ' + ${allievo.nome } + ${ allievo.cognome}" />
+					</div>
+					<div>
+						<p th:text="'Email: ' + ${allievo.email } " />
+					</div>
+					<div>
+						<p th:text="'Luogo di Nascita: ' + ${allievo.luogoNascita } " />
+					</div>
+						<div>
+						<p th:text="'DataNascita: ' + ${allievo.dataNascita}" />
+					</div>
+					
+			</div>
+			<div class="row">
+				<div>
+			<div>Attivita:
+					</div>	
+    	<ul>
+			<th:foreach th:each="attivita : ${allievo.attivitas}">
+				<li><a th:text="${attivita.nome}"
+					th:href="@{/attivita/resultsAttivita(id=${attivita.id})}"></a> </li>
+			</th:foreach>
+		</ul>
+		
+    </div>
+			</div>
+		
+		</div>
+		
+	</div>
+	
+</body>
+</html>
