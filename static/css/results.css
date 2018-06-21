@@ -1,0 +1,54 @@
+
+.main-container{
+    
+min-height: 1000px;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+	background-position: center;
+	background-image: url("http://img.kb-cdn.com/imgviewer/NVpIM2ptOHhYRzVmUk5rM1NrNlFxYVV6enV4aGk2UFRJMmxPckdDUUVNYTBkZDBSQzUyZHY4ZStyQmRyZFdGZ1RoVGpKRlppanlXbkFpVkFUOGs0LzU1WkpSU0YvdEZBUU9LcGw1Y0d1MnVVZndFWjcwREpRU1d1S05pNm0zakFQWGdidFBTeXY1ZGR4WUM2b1dJZmNqdkxHTzlrbnkwMDNTUkl5RG9wRkxIZWlySG5JOXhEdHZNSk5lVWRiUkJxYVZpT3BUMTdwdlZoQjZRNmUzOWRpQT09?square=0");
+	background-image: url(../img/panca.jpg);
+	color: #fff
+    }
+
+.highlight  {
+    width: 580px;
+    color: white;
+    background: rgba(0, 0, 255, 0.24);
+    border-radius: 40px;
+    padding: 16%;
+    
+	}
+    
+.highlight img {
+    
+    float: left;
+    width: 100px;
+    height: 100px; 
+    margin: 10px;
+    }
+    
+.highlight ul {
+    list-style-image: url('http://icons.iconarchive.com/icons/yusuke-kamiyamane/fugue/16/tick-small-icon.png');
+    margin-left: 1%;
+    float: left; 
+    clear: right
+    }
+    
+.highlight button {
+   margin-left: 1%;
+    float: right;
+    }
+
+.highlight h1,h2,h3,h4,h5,h6 {
+    padding-bottom: 2%;
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.41);
+    font-size:20px;
+    text-align : center;
+    text-transform: uppercase;
+    }
+    
+.highlight p {
+    text-align: justify;
+    }
